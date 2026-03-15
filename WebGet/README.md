@@ -2,12 +2,12 @@ Implement the tool get_webpage_html(url) as improvement over WebFetch that doesn
 
 That tool produce:
 
-get_webpage_html(url)
-   │
-   ├─ HTTP fetch
-   │
-   ├─ detect empty / SPA
-   │
-   ├─ detect anti-bot
-   │
-   └─ browser render
+get_webpage_html(url)  
+   │  
+   ├─ HTTP fetch  
+   │  
+   ├─ detect empty / SPA  
+   │  
+   ├─ detect anti-bot  
+   │  
+   └─ browser render  
