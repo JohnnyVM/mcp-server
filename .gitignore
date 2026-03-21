@@ -1,0 +1,21 @@
+# Go binaries
+/WebGet/webget-mcp
+/SearchAgent/searchagent-mcp
+
+# Go build artifacts
+*.test
+/tags
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+.eggs/
+
+# Benchmark results (generated output)
+benchmark/results/*.json
+benchmark/results/*.jsonl
+benchmark/results/*.csv

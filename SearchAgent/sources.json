@@ -1,0 +1,68 @@
+[
+  {
+    "name": "hackernews",
+    "label": "Hacker News",
+    "category": "tech-news",
+    "query_url": "https://hn.algolia.com/api/v1/search?query={query}&tags=story",
+    "result_type": "json-api",
+    "result_fields": {
+      "items": "hits",
+      "url": "url",
+      "title": "title",
+      "snippet": "story_text"
+    },
+    "content_types": ["html"],
+    "description": "Tech news and community discussion. Best for: recent releases, announcements, opinions, community reactions."
+  },
+  {
+    "name": "arxiv",
+    "label": "arXiv",
+    "category": "academic",
+    "query_url": "https://arxiv.org/search/?query={query}&searchtype=all",
+    "result_type": "html-links",
+    "content_types": ["html", "pdf"],
+    "description": "Research papers in CS, math, physics, and related fields. Results include HTML abstract pages and PDF download links."
+  },
+  {
+    "name": "github",
+    "label": "GitHub",
+    "category": "code",
+    "query_url": "https://github.com/search?q={query}&type=repositories",
+    "result_type": "html-links",
+    "content_types": ["html"],
+    "description": "Open source repositories. Best for: finding projects, implementations, examples, and libraries."
+  },
+  {
+    "name": "stackoverflow",
+    "label": "Stack Overflow",
+    "category": "community",
+    "query_url": "https://api.stackexchange.com/2.3/search?q={query}&site=stackoverflow&order=desc&sort=relevance",
+    "result_type": "json-api",
+    "result_fields": {
+      "items": "items",
+      "url": "link",
+      "title": "title",
+      "snippet": "title"
+    },
+    "content_types": ["html"],
+    "description": "Programming Q&A. Best for: how-to questions, error messages, debugging help, code examples."
+  },
+  {
+    "name": "wikipedia",
+    "label": "Wikipedia",
+    "category": "encyclopedic",
+    "query_url": "https://en.wikipedia.org/w/index.php?search={query}",
+    "result_type": "html-article",
+    "content_types": ["html"],
+    "description": "General reference encyclopedia. Best for: concepts, background knowledge, definitions, history."
+  },
+  {
+    "name": "pkg-go-dev",
+    "label": "Go Packages",
+    "category": "code",
+    "query_url": "https://pkg.go.dev/search?q={query}",
+    "result_type": "html-links",
+    "content_types": ["html"],
+    "description": "Go package documentation and discovery. Best for: Go library APIs, module discovery, package usage."
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "webget": {
+      "type": "stdio",
+      "command": "/home/johnny/git/ai/mcp-server/WebGet/webget-mcp"
+    },
+    "searchagent": {
+      "type": "stdio",
+      "command": "/home/johnny/git/ai/mcp-server/SearchAgent/searchagent-mcp"
+    }
+  }
+}
