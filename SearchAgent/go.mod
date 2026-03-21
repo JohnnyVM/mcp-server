@@ -7,7 +7,7 @@ require (
 	github.com/chromedp/chromedp v0.13.0
 	github.com/ledongthuc/pdf v0.0.0-20240201131950-da5b75280b06
 	github.com/modelcontextprotocol/go-sdk v0.4.0
-	golang.org/x/net v0.34.0
+	golang.org/x/net v0.38.0
 )
 
 require (
@@ -21,5 +21,5 @@ require (
 	github.com/gobwas/ws v1.4.0 // indirect
 	github.com/google/jsonschema-go v0.2.1-0.20250825175020-748c325cec76 // indirect
 	github.com/yosida95/uritemplate/v3 v3.0.2 // indirect
-	golang.org/x/sys v0.29.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
 )
