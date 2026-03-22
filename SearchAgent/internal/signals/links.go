@@ -1,8 +1,10 @@
+// Package signals provides signal processing utilities for the SearchAgent.
 package signals
 
 import (
 	"net/url"
 	"path"
+	"slices"
 	"strings"
 )
 
@@ -45,10 +47,8 @@ func ClassifyLink(rawURL, anchorText, pageHost string) string {
 	}
 
 	// Navigation boilerplate
-	for _, hint := range navPhrases {
-		if text == hint {
-			return "navigation"
-		}
+	if slices.Contains(navPhrases, text) {
+		return "navigation"
 	}
 
 	// Related content
