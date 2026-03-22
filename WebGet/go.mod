@@ -2,11 +2,13 @@ module github.com/johnnysvm/webget-mcp
 
 go 1.23.0
 
-require github.com/modelcontextprotocol/go-sdk v0.4.0
+require (
+	github.com/chromedp/chromedp v0.13.0
+	github.com/modelcontextprotocol/go-sdk v0.4.0
+)
 
 require (
 	github.com/chromedp/cdproto v0.0.0-20250222051814-50c6cb17f10a // indirect
-	github.com/chromedp/chromedp v0.13.0 // indirect
 	github.com/chromedp/sysutil v1.1.0 // indirect
 	github.com/go-json-experiment/json v0.0.0-20250211171154-1ae217ad3535 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
