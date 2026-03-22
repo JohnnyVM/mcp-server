@@ -2,7 +2,7 @@
   {
     "name": "hackernews",
     "label": "Hacker News",
-    "category": "tech-news",
+    "tags": ["tech-news", "community"],
     "query_url": "https://hn.algolia.com/api/v1/search?query={query}&tags=story",
     "result_type": "json-api",
     "result_fields": {
@@ -17,7 +17,7 @@
   {
     "name": "arxiv",
     "label": "arXiv",
-    "category": "academic",
+    "tags": ["academic", "research"],
     "query_url": "https://arxiv.org/search/?query={query}&searchtype=all",
     "result_type": "html-links",
     "content_types": ["html", "pdf"],
@@ -26,7 +26,7 @@
   {
     "name": "github",
     "label": "GitHub",
-    "category": "code",
+    "tags": ["code", "tech-news"],
     "query_url": "https://github.com/search?q={query}&type=repositories",
     "result_type": "html-links",
     "content_types": ["html"],
@@ -35,7 +35,7 @@
   {
     "name": "stackoverflow",
     "label": "Stack Overflow",
-    "category": "community",
+    "tags": ["community", "code"],
     "query_url": "https://api.stackexchange.com/2.3/search?q={query}&site=stackoverflow&order=desc&sort=relevance",
     "result_type": "json-api",
     "result_fields": {
@@ -50,7 +50,7 @@
   {
     "name": "wikipedia",
     "label": "Wikipedia",
-    "category": "encyclopedic",
+    "tags": ["encyclopedic", "research"],
     "query_url": "https://en.wikipedia.org/w/index.php?search={query}",
     "result_type": "html-article",
     "content_types": ["html"],
@@ -59,7 +59,7 @@
   {
     "name": "pkg-go-dev",
     "label": "Go Packages",
-    "category": "code",
+    "tags": ["code", "docs"],
     "query_url": "https://pkg.go.dev/search?q={query}",
     "result_type": "html-links",
     "content_types": ["html"],

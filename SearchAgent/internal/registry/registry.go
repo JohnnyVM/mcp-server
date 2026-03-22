@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sort"
 )
 
 // Source defines a named research source and how to query it.
 type Source struct {
 	Name         string            `json:"name"`
 	Label        string            `json:"label"`
-	Category     string            `json:"category"`
+	Tags         []string          `json:"tags"`
 	QueryURL     string            `json:"query_url"`
 	ResultType   string            `json:"result_type"`   // "json-api" | "html-links" | "html-article"
 	ResultFields map[string]string `json:"result_fields"` // field mapping for json-api type
@@ -52,14 +53,33 @@ func DefaultPath() string {
 // All returns all sources.
 func (r *Registry) All() []Source { return r.sources }
 
-// ByCategory returns sources matching the given category.
-func (r *Registry) ByCategory(category string) []Source {
+// ByTag returns sources that have the given tag.
+func (r *Registry) ByTag(tag string) []Source {
 	var out []Source
 	for _, s := range r.sources {
-		if s.Category == category {
-			out = append(out, s)
+		for _, t := range s.Tags {
+			if t == tag {
+				out = append(out, s)
+				break
+			}
 		}
 	}
+	return out
+}
+
+// AllTags returns a deduplicated sorted list of all tags across all sources.
+func (r *Registry) AllTags() []string {
+	seen := make(map[string]bool)
+	var out []string
+	for _, s := range r.sources {
+		for _, t := range s.Tags {
+			if !seen[t] {
+				seen[t] = true
+				out = append(out, t)
+			}
+		}
+	}
+	sort.Strings(out)
 	return out
 }
 

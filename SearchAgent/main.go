@@ -19,10 +19,15 @@ func main() {
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "list_sources",
-		Description: "List available research sources. Returns [{name, label, category, description, content_types}]. " +
+		Description: "List available research sources. Returns [{name, label, tags, description, content_types}]. " +
 			"Call this first to discover sources, then use query_source with a source name. " +
-			"Filter by category: tech-news | docs | code | community | academic | encyclopedic.",
+			"Filter by tag: tech-news | docs | code | community | academic | research | encyclopedic.",
 	}, tools.NewListSources(reg))
+
+	mcp.AddTool(server, &mcp.Tool{
+		Name:        "list_sources_tags",
+		Description: "List all available tags that can be used to filter list_sources.",
+	}, tools.NewListSourcesTags(reg))
 
 	mcp.AddTool(server, &mcp.Tool{
 		Name: "query_source",
